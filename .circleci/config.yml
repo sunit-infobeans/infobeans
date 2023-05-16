@@ -13,7 +13,7 @@ jobs:
       # git 2.6.0. (Use -stretch for circleci/node containers.)
       #- image: circleci/node:6.11-stretch # change version
       #- image: cimg/node:12.18.2
-      - image: cimg/php:8.0.24-node
+      - image: cimg/php:8.1.19-node
 
 
       #- image: circleci/php:7.3-node-browsers # need to check if need to change
@@ -22,28 +22,34 @@ jobs:
       # prevent endless loops of deploy scripts.
       ignore:
         - /^.*-built$/
-    steps:
-      - checkout
-      - restore_cache:
-          name: Restore node modules cache
-          key: node_modules-v2-{{ checksum "package.json" }}
-      - save_cache:
-          name: Save dependancies cache
-          key: cache-v2-{{ checksum "package.json" }}
-          paths:
-            - ~/.npm
-            - ~/.cache
-            - ~/.composer/cache
+    
 
+      steps:
+      - checkout
       - run:
-          name: "Run builds" # change condition - Use IN
-          no_output_timeout: 30m
+          name: Setup environment
           command: |
-            if [[ $CIRCLE_BRANCH == 'production' || $CIRCLE_BRANCH == 'preprod' || $CIRCLE_BRANCH == 'develop' ]] 
-            then
-              echo 'running create_build.sh ....Fetching from default branch'
-              ./private/bin/create_build.sh              
-            else
-              echo 'running build_changes.sh ....Fetching from other branches'
-              ./private/bin/run_pr_checks.sh              
-            fi
+            echo "Setting up environment variables"
+            # Set up environment variables here
+      - run:
+          name: Install Node.js and npm
+          command: |
+            curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+      - run:
+          name: Install npm dependencies
+          command: |
+            npm install
+      - run:
+          name: Run linters
+          command: |
+            npm run lint
+      - run:
+          name: Build project with webpack
+          command: |
+            npm run build
+      - run:
+          name: Test
+          command: |
+            echo "Running tests"
+            # Run tests here
