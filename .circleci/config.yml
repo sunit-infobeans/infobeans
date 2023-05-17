@@ -16,16 +16,16 @@ jobs:
     #   - image: cimg/php:8.2.6-node
 
     steps:
-      - checkout
-      - run: php --version
-      - run: node --version
+      # - checkout
+      # - run: php --version
+      # - run: node --version
       #- image: circleci/php:7.3-node-browsers # need to check if need to change
-    branches:
-      # Don't build from a branch with the `-built` suffix, to
-      # prevent endless loops of deploy scripts.
-      ignore:
-        - /^.*-built$/
-    steps:
+    # branches:
+    #   # Don't build from a branch with the `-built` suffix, to
+    #   # prevent endless loops of deploy scripts.
+    #   ignore:
+    #     - /^.*-built$/
+    # steps:
       # - checkout
       # - restore_cache:
       #     # name: Restore node modules cache
