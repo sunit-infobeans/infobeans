@@ -25,4 +25,28 @@ jobs:
       # prevent endless loops of deploy scripts.
       ignore:
         - /^.*-built$/
-   
+    steps:
+      - checkout
+      - restore_cache:
+          # name: Restore node modules cache
+          # key: node_modules-v2-{{ checksum "package.json" }}
+      - save_cache:
+          # name: Save dependancies cache
+          # key: cache-v2-{{ checksum "package.json" }}
+          paths:
+            - ~/.npm
+            - ~/.cache
+            - ~/.composer/cache
+
+      - run:
+          name: "Run builds" # change condition - Use IN
+          no_output_timeout: 30m
+          command: |
+            if [[$CIRCLE_BRANCH == 'develop' ]] 
+            then
+              echo 'running create_build.sh ....Fetching from default branch'
+              ./private/bin/create_build.sh              
+            else
+              echo 'running build_changes.sh ....Fetching from other branches'
+              ./private/bin/run_pr_checks.sh              
+            fi
