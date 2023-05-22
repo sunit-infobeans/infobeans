@@ -15,12 +15,12 @@ jobs:
     steps:
       - checkout
       - run:
-        name: "webpack install"
-        command: "npm i -g webpack webpack-cli"
+          name: "install"
+          command: "npm i -g webpack webpack-cli"
 
-        name: "Say hello"
-        command: "webpack --mode development"
-
+ - run:
+          name: "Say hello"
+          command: "webpack --mode development"
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
