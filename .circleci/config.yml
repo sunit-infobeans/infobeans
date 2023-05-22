@@ -1,42 +1,37 @@
-# PHP CircleCI 2.0 configuration file.
-#
-# Check https://circleci.com/docs/2.0/language-php/ for more details
-#
-version: 2
+# Use the latest 2.1 version of CircleCI pipeline process engine.
+# See: https://circleci.com/docs/configuration-reference
+version: 2.1
+
+# Define a job to be invoked later in a workflow.
+# See: https://circleci.com/docs/configuration-reference/#jobs
 jobs:
-  build:
+  install-theme-dependencies:
+    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
+    # See: https://circleci.com/docs/configuration-reference/#executor-job
     docker:
-      # Pick a base image which matches the version of Node you need for
-      # building from https://hub.docker.com/r/circleci/node/tags/
-      #
-      # Note: If using a different container, make sure it contains at least
-      # git 2.6.0. (Use -stretch for circleci/node containers.)
-      #- image: circleci/node:6.11-stretch # change version
-      #- image: cimg/node:12.18.2
-      - image: cimg/php:8.0.24-node
-
-
-      #- image: circleci/php:7.3-node-browsers # need to check if need to change
-    branches:
-      # Don't build from a branch with the `-built` suffix, to
-      # prevent endless loops of deploy scripts.
-      ignore:
-        - /^.*-built$/
+      - image: cimg/node:16.10
+    # Add steps to the job
+    # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
       - checkout
-      - restore_cache:
-          name: Restore node modules cache
-          key: node_modules-v2-{{ checksum "package.json" }}
-      - save_cache:
-          name: Save dependancies cache
-          key: cache-v2-{{ checksum "package.json" }}
-          paths:
-            - ~/.npm
-            - ~/.cache
-            - ~/.composer/cache
-
       - run:
-          name: "Run builds" # change condition - Use IN
-          no_output_timeout: 30m
-          command: |
-            webpack --mode production
+          name: "install dependencies"
+          command: "npm i"
+
+# Orchestrate jobs using workflows
+# See: https://circleci.com/docs/configuration-reference/#workflows
+workflows:
+ create-build:
+    jobs:
+     built-theme-code:
+    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
+    # See: https://circleci.com/docs/configuration-reference/#executor-job
+    docker:
+      - image: cimg/node:16.10
+    # Add steps to the job
+    # See: https://circleci.com/docs/configuration-reference/#steps
+    steps:
+      - checkout
+      - run:
+          name: "Build Theme"
+          command: "npm run build"
