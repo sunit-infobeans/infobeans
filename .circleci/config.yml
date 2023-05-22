@@ -23,21 +23,21 @@ jobs:
       ignore:
         - /^.*-built$/
     steps:
-      - checkout
-      - restore_cache:
-          name: Restore node modules cache
-          key: node_modules-v2-{{ checksum "package.json" }}
-      - save_cache:
-          name: Save dependancies cache
-          key: cache-v2-{{ checksum "package.json" }}
-          paths:
-            - ~/.npm
-            - ~/.cache
-            - ~/.composer/cache
+      # - checkout
+      # - restore_cache:
+      #     name: Restore node modules cache
+      #     key: node_modules-v2-{{ checksum "package.json" }}
+      # - save_cache:
+      #     name: Save dependancies cache
+      #     key: cache-v2-{{ checksum "package.json" }}
+      #     paths:
+      #       - ~/.npm
+      #       - ~/.cache
+      #       - ~/.composer/cache
 
       - run:
           name: "Run builds" # change condition - Use IN
           no_output_timeout: 30m
           command: |
-            npm i
+            npm install
             npm build
