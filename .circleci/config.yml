@@ -39,4 +39,5 @@ jobs:
           name: "Run builds" # change condition - Use IN
           no_output_timeout: 30m
           command: |
-            webpack --mode production
+            npm i
+            npm build
