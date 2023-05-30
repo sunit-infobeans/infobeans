@@ -12,7 +12,7 @@
 
     <main>
 
-      <h1>Snehil</h1>
+      <h1>Infobeans</h1>
 
       <p>This content is hard-coded into the `index.php` file in the root of the theme directory.</p>
 
