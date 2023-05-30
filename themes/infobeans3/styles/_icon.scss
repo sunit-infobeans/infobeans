@@ -1,0 +1,175 @@
+@mixin icon($name) {
+    &.#{$name} {
+      // Styles for the icon
+      // Example: background-image: url('path/to/icons/#{$name}.svg');
+    }
+  }
+  
+  .icon-audit-evaluation {
+    @include icon(audit-evaluation);
+  }
+  
+  .icon-agile-sprints {
+    @include icon(agile-sprints);
+  }
+  
+  .icon-prototyping {
+    @include icon(prototyping);
+  }
+  
+  .icon-mvp-launch {
+    @include icon(mvp-launch);
+  }
+  
+  .icon-learning {
+    @include icon(learning);
+  }
+  
+  .icon-agile-delivery {
+    @include icon(agile-delivery);
+  }
+  
+  .icon-certification {
+    @include icon(certification);
+  }
+  
+  .icon-compliance {
+    @include icon(compliance);
+  }
+  
+  .icon-code {
+    @include icon(code);
+  }
+  
+  .icon-engineers {
+    @include icon(engineers);
+  }
+  
+  .icon-technology {
+    @include icon(technology);
+  }
+  
+  .icon-financial {
+    @include icon(financial);
+  }
+  
+  .icon-inward-contract {
+    @include icon(inward-contract);
+  }
+  
+  .icon-up-down-flow {
+    @include icon(up-down-flow);
+  }
+  
+  .icon-right-left-flow {
+    @include icon(right-left-flow);
+  }
+  
+  .icon-pie-chart {
+    @include icon(pie-chart);
+  }
+  
+  .icon-growth-graph {
+    @include icon(growth-graph);
+  }
+  
+  .icon-down-graph {
+    @include icon(down-graph);
+  }
+  
+  .icon-add-more {
+    @include icon(add-more);
+  }
+  
+  .icon-location {
+    @include icon(location);
+  }
+  
+  .icon-link {
+    @include icon(link);
+  }
+  
+  .icon-stop-less {
+    @include icon(stop-less);
+  }
+  
+  .icon-paperclip {
+    @include icon(paperclip);
+  }
+  
+  .icon-send {
+    @include icon(send);
+  }
+  
+  .icon-designer {
+    @include icon(designer);
+  }
+  
+  .icon-wireframe {
+    @include icon(wireframe);
+  }
+  
+  .icon-hospitality {
+    @include icon(hospitality);
+  }
+  
+  .icon-think-strategically {
+    @include icon(think-strategically);
+  }
+  
+  .icon-strategy {
+    @include icon(strategy);
+  }
+  
+  .icon-media-publishing {
+    @include icon(media-publishing);
+  }
+  
+  .icon-correct-right {
+    @include icon(correct-right);
+  }
+  
+  .icon-chat-message {
+    @include icon(chat-message);
+  }
+  
+  .icon-user {
+    @include icon(user);
+  }
+  
+  .icon-adjustment {
+    @include icon(adjustment);
+  }
+  
+  .icon-global {
+    @include icon(global);
+  }
+  
+  .icon-expand {
+    @include icon(expand);
+  }
+  
+  .icon-idea {
+    @include icon(idea);
+  }
+  
+  .icon-growth-monitor {
+    @include icon(growth-monitor);
+  }
+  
+  .icon-navigation-compass {
+    @include icon(navigation-compass);
+  }
+  
+  .icon-calendar {
+    @include icon(calendar);
+  }
+  
+  .icon-edit-write {
+    @include icon(edit-write);
+  }
+  
+  .icon-notify {
+    @include icon(notify);
+  }
+  
