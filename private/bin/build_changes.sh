@@ -87,6 +87,5 @@
 # fi
 
 echo "yarn build:dev --all-projects"
-#webpack --mode develop
-cd wp-content
-yarn build:dev:all
+#webpack --mode develop                                                                                                                                                                                                                                                                                                               
+build:dev:all
