@@ -86,6 +86,6 @@
 #   exit 1;
 # fi
 
-echo "webpack --mode production"
-webpack --mode production
-# yarn build:prod --all-projects
+echo "yarn build:dev --all-projects"
+#webpack --mode develop
+ yarn build:dev:all
