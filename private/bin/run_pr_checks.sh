@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ./private/bin/build_changes.sh
+./private/bin/build_changes.sh
 
 # echo "Installing cypress"
 # yarn cypress install
