@@ -28,11 +28,5 @@ jobs:
           name: "Run builds" # change condition - Use IN
           no_output_timeout: 30m
           command: |
-            if [[ $CIRCLE_BRANCH == 'production' || $CIRCLE_BRANCH == 'develop' ]] 
-            then
-              echo 'running create_build.sh ....Fetching from default branch'
-              ./private/bin/create_build.sh              
-            else
-              echo 'running build_changes.sh ....Fetching from other branches'
-              ./private/bin/run_pr_checks.sh              
-            fi
+           ./private/bin/create_build.sh              
+           
