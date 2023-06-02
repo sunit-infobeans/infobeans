@@ -1,0 +1,14 @@
+/*! Copyright (c) 2023 InfoBeans | infobeans.com | @InfoBeans */
+main {
+  max-width: 500px;
+  margin: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+h1 {
+  color: green;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi4vc3R5bGVzL2d1dHVuYmVyZy5jc3MiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vX2NvbnRlbnQuc2NzcyIsIndlYnBhY2s6Ly8vbWFpbi5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIm1haW4ge1xuICBtYXgtd2lkdGg6IDUwMHB4O1xuICBtYXJnaW46IDIwcHg7XG4gIHBhZGRpbmc6IDIwcHg7XG4gIGJhY2tncm91bmQ6IHJnYigyNTUsIDI1NSwgMjU1LCAuOCk7XG4gIGJvcmRlci1yYWRpdXM6IDEwcHg7XG59XG5oMSB7XG4gIGNvbG9yOiBncmVlbjtcbn1cbiIsIm1haW4ge1xuICBtYXgtd2lkdGg6IDUwMHB4O1xuICBtYXJnaW46IDIwcHg7XG4gIHBhZGRpbmc6IDIwcHg7XG4gIGJhY2tncm91bmQ6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC44KTtcbiAgYm9yZGVyLXJhZGl1czogMTBweDtcbn1cblxuaDEge1xuICBjb2xvcjogZ3JlZW47XG59Il0sIm1hcHBpbmdzIjoiO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FDQ0E7QUFDQTtBREFBO0FBQ0E7QUNFQTsiLCJzb3VyY2VSb290IjoiIn0=*/
