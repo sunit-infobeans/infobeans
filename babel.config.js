@@ -25,8 +25,8 @@ const presets = [
   [
     '@babel/preset-react',
     {
-      pragma: 'h', // default pragma is React.createElement
-      pragmaFrag: 'Fragment', // default is React.Fragment
+      pragma: 'wp.element.createElement', // default pragma is React.createElement
+      pragmaFrag: 'wp.element.Fragment', // default is React.Fragment
       throwIfNamespace: false, // defaults to true
     },
   ],
