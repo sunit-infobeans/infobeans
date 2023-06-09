@@ -73,7 +73,7 @@ class TaxonomyControls extends Component {
     const tempArr = updatedResult;
     const updatedResultKeys = Object.keys(updatedResult);
     updatedResultKeys.forEach(key => {
-      tempArr[key].route = `/idg/v1/${updatedResult[key].slug}`;
+      tempArr[key].route = `wp/v2/${updatedResult[key].slug}`;
     });
     this.setState({
       taxonomies: tempArr,

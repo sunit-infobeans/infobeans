@@ -20,12 +20,15 @@ class PostTypeSelect extends Component {
     delete types.wp_block;
     delete types.sidebar;
     delete types.page;
-    delete types.product;
-    delete types.sponsored_link;
+    delete types.nav_menu_item;
+    delete types.wp_template;
+
+    
     // Jetpack Post Types
     delete types.feedback;
     delete types.jp_pay_product;
     delete types.jp_pay_order;
+    
 
     const options = Object.keys(types).map(key => ({
       label: types[key].name,
@@ -53,9 +56,10 @@ class PostTypeSelect extends Component {
     const { options, loading } = this.state;
     const { value } = this.props;
 
+    console.log('api log ', this.handleInputChange);
     return (
       <SelectControl
-        label={__('Content Type', 'idg-base-theme')}
+        label={__('Content Type', 'infobeans')}
         options={options}
         isLoading={loading}
         isDisabled={loading}
