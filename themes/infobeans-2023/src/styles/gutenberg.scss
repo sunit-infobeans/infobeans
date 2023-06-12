@@ -1,0 +1,12 @@
+/**
+ * Gutenberg specific styles go here.
+ * Typically can copy from app.scss and then configure from there.
+ */
+.wp-block {
+  max-width: 1420px;
+}
+  
+/**
+ * Components
+ */
+@import "./editor/components/post-selector.scss";
