@@ -58,6 +58,8 @@ add_action( 'enqueue_block_editor_assets', 'gutenberg_ib_assets' );
  * Include files for blocks so it can be rendered with php.
  */
 require_once plugin_dir_path( __FILE__ ) . '/blocks/testimonials.php';
+require_once plugin_dir_path( __FILE__ ) . '/blocks/career.php';
+
 
 
 if ( ! function_exists( 'register_php_rendered_blocks' ) ) {
@@ -79,6 +81,17 @@ if ( ! function_exists( 'register_php_rendered_blocks' ) ) {
 				],
 			]
 		);
+
+		register_block_type(
+			'infobeans-2023/career',
+			[
+				'render_callback' => 'render_career_block',
+				'editor_script'   => 'gutenberg_ib_assets',
+			]
+		);
+
+		register_block_type( 'infobeans-2023/featured-offering' );
+		register_block_type( 'infobeans-2023/featured' );
 	}
 }
 add_action( 'init', 'register_php_rendered_blocks' );

@@ -1,0 +1,97 @@
+.career {
+  background: #aa142d;
+  height: 700px;
+}
+
+.career .container {
+  position: relative;
+  display: flex;
+  height: 100%;
+  max-width: 1315px;
+  margin: auto;
+}
+
+.career .container .content-wrapper {
+  max-width: 535px;
+  padding-left: 65px;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.career .container .content-wrapper .section-heading {
+  color: #fff;
+  line-height: 56px;
+}
+
+.section-heading {
+  font-size: 48px;
+  font-weight: 400;
+  color: #373742;
+}
+
+.career .container .content-wrapper .content-inner {
+  font-size: 24px;
+  color: #fff;
+  line-height: 40px;
+  font-weight: 300;
+  margin: 25px 0;
+}
+
+.link-with-arrow.white {
+  color: #fff;
+}
+
+.link-with-arrow {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link-with-arrow img {
+  margin: 0 0 2px 5px;
+  transition: .3s;
+}
+
+.career .container .img-career-box .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: .3s;
+}
+
+.career .container .img-career-box.one {
+  top: -65px;
+  right: 235px;
+}
+
+.career .container .img-career-box.two {
+  top: 160px;
+  right: 55px;
+}
+
+.career .container .img-career-box.three {
+  bottom: -90px;
+  right: 250px;
+}
+
+.career .container .img-career-box {
+  height: 360px;
+  width: 360px;
+  // box-shadow: -1.08728px -1.08728px 13.0474px 1.08728px rgb(55 55 66 / 8%), 0px 0px 5.43642px 1.08728px rgb(234 27 61 / 2%);
+  border-radius: 100%;
+  transition: .3s ease-in-out;
+  border: 15px solid #fff9ed;
+  overflow: hidden;
+  position: absolute;
+}
+
+.site-main {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
+}

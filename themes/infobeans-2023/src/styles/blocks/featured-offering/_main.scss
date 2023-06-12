@@ -1,0 +1,128 @@
+.featured-offerings {
+  padding: 65px 0 140px;
+}
+
+.container {
+  max-width: 1315px;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  // margin-right: calc(var(--bs-gutter-x) * -0.5);
+  // margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.col-6 {
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.featured-offerings .featured-offerings-heading {
+  position: sticky;
+  top: 110px;
+}
+
+.featured-offerings .featured-offerings-heading .section-heading {
+  margin-bottom: 35px;
+  line-height: 56px;
+}
+
+.section-heading {
+  font-size: 48px;
+  font-weight: 400;
+  color: #373742;
+}
+
+.section-heading .red {
+  color: #ea1b3d;
+}
+
+.link-with-arrow.red {
+  color: #ea1b3d;
+}
+
+.link-with-arrow {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+img, svg {
+  vertical-align: middle;
+}
+
+.featured-offerings .block {
+  margin-bottom: 100px;
+}
+
+.featured-offerings .block .image {
+  height: 75px;
+}
+
+.featured-offerings .block .content .heading {
+  color: #373742;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 30px 0 15px;
+  line-height: 40px;
+}
+
+.featured-offerings .block .content .content-inner {
+  color: #373742;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.clients-trust-us {
+  padding: 65px 0;
+}
+
+.clients-trust-us .section-heading {
+  max-width: 390px;
+  position: sticky;
+  top: 110px;
+  line-height: 56px;
+}
+
+.clients-trust-us .block:not(:last-of-type) {
+  margin-bottom: 100px;
+}
+
+.clients-trust-us .block {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+}
+
+.clients-trust-us .block .image {
+  margin-right: 45px;
+  width: 155px;
+}
+
+.clients-trust-us .block .content {
+  padding-right: 20px;
+}
+
+.clients-trust-us .block .content .heading {
+  color: #373742;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  line-height: 32px;
+}
+
+.clients-trust-us .block .content .content-inner {
+  color: #373742;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
